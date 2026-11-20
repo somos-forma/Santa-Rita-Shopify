@@ -1,6 +1,10 @@
 {% comment %}
   Section contract: awards carousel with native touch scrolling and independent
   desktop/mobile autoplay. Autoplay pauses for interaction and reduced motion.
+  Optional: section button and a lightbox that opens images/videos complete, in their own ratio
+  (1080x1920 media opens as a full vertical frame). Linked slides keep their link in the caption
+  and in a button inside the lightbox.
+  Init waits for DOMContentLoaded: later instances connect before the parser adds their children.
   @example
   Add award slides and enable autoplay for the desired viewport in the editor.
 {% endcomment %}
@@ -17,6 +21,8 @@
     --awards-background: {{ section.settings.background }};
     --awards-text-color: {{ section.settings.text_color }};
     --awards-card-width: {{ section.settings.card_width }}px;
+    --awards-button-background: {{ section.settings.button_background }};
+    --awards-button-text: {{ section.settings.button_text_color }};
   "
 >
   <div class="santa-rita-awards-slider__container">
@@ -40,6 +46,12 @@
       {% if section.settings.text != blank %}
         <p>{{ section.settings.text }}</p>
       {% endif %}
+
+      {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+        <a class="santa-rita-awards-slider__button" href="{{ section.settings.button_link }}">
+          {{- section.settings.button_label | escape -}}
+        </a>
+      {% endif %}
     </div>
 
     <div class="santa-rita-awards-slider__carousel">
@@ -49,20 +61,57 @@
             {% liquid
               assign block_settings = block.settings
               assign tag_name = 'div'
-              if block_settings.link != blank
+              assign zoomable = false
+              assign has_media = false
+              assign media_ratio = 0.5625
+              if block_settings.media_type == 'video'
+                if block_settings.video != blank
+                  assign has_media = true
+                  if block_settings.video.aspect_ratio > 0
+                    assign media_ratio = block_settings.video.aspect_ratio
+                  endif
+                elsif block_settings.video_asset_name != blank
+                  assign has_media = true
+                endif
+              elsif block_settings.image != blank
+                assign has_media = true
+                if block_settings.image.aspect_ratio > 0
+                  assign media_ratio = block_settings.image.aspect_ratio
+                endif
+              endif
+              if section.settings.enable_lightbox and has_media
+                assign zoomable = true
+              elsif block_settings.link != blank
                 assign tag_name = 'a'
               endif
             %}
 
             <{{ tag_name }}
-              class="santa-rita-awards-slide santa-rita-awards-slide--{{ block_settings.media_type }}"
-              {% if block_settings.link != blank %}
+              class="santa-rita-awards-slide santa-rita-awards-slide--{{ block_settings.media_type }}{% if zoomable %} santa-rita-awards-slide--zoomable{% endif %}"
+              {% if tag_name == 'a' %}
                 href="{{ block_settings.link }}"
               {% endif %}
               data-awards-slide
               {{ block.shopify_attributes }}
             >
-              <div class="santa-rita-awards-slide__media">
+              <div
+                class="santa-rita-awards-slide__media"
+                {% if zoomable %}
+                  data-awards-open
+                  role="button"
+                  tabindex="0"
+                  aria-haspopup="dialog"
+                  aria-label="Ampliar {% if block_settings.media_type == 'video' %}video{% else %}imagen{% endif %}{% if block_settings.title != blank %} {{ block_settings.title | escape }}{% else %} {{ forloop.index }}{% endif %}"
+                  data-ratio="{{ media_ratio }}"
+                  {% if block_settings.link != blank %}
+                    data-link="{{ block_settings.link }}"
+                  {% endif %}
+                  {% if block_settings.media_type != 'video' %}
+                    data-full-src="{{ block_settings.image | image_url: width: 1080 }}"
+                    data-full-alt="{{ block_settings.image.alt | escape }}"
+                  {% endif %}
+                {% endif %}
+              >
                 {% if block_settings.media_type == 'video' %}
                   {% if block_settings.video != blank %}
                     {{
@@ -106,16 +155,28 @@
                 {% else %}
                   {{ 'image' | placeholder_svg_tag: 'santa-rita-awards-slide__image santa-rita-awards-slide__image--placeholder' }}
                 {% endif %}
+
+                {% if zoomable %}
+                  <span class="santa-rita-awards-slide__expand" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                  </span>
+                {% endif %}
               </div>
 
               {% if block_settings.media_type == 'image' %}
                 {% if block_settings.title != blank or block_settings.subtitle != blank %}
                   <div class="santa-rita-awards-slide__caption">
+                    {% if zoomable and block_settings.link != blank %}
+                      <a class="santa-rita-awards-slide__caption-link" href="{{ block_settings.link }}">
+                    {% endif %}
                     {% if block_settings.title != blank %}
                       <h3>{{ block_settings.title }}</h3>
                     {% endif %}
                     {% if block_settings.subtitle != blank %}
                       <p>{{ block_settings.subtitle }}</p>
+                    {% endif %}
+                    {% if zoomable and block_settings.link != blank %}
+                      </a>
                     {% endif %}
                   </div>
                 {% endif %}
@@ -157,6 +218,26 @@
       </div>
     </div>
     {% endif %}
+
+  {% if section.settings.enable_lightbox %}
+    <dialog class="santa-rita-awards-lightbox" data-awards-lightbox aria-label="Vista ampliada">
+      <div class="santa-rita-awards-lightbox__content" data-awards-lightbox-content>
+        <div class="santa-rita-awards-lightbox__frame" data-awards-lightbox-frame></div>
+        <a class="santa-rita-awards-lightbox__link" data-awards-lightbox-link href="#" hidden>
+          {{- section.settings.lightbox_link_label | default: 'Ver más' | escape -}}
+        </a>
+      </div>
+      <button type="button" class="santa-rita-awards-lightbox__close" data-awards-lightbox-close aria-label="Cerrar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+      <button type="button" class="santa-rita-awards-lightbox__nav santa-rita-awards-lightbox__nav--prev" data-awards-lightbox-prev aria-label="Anterior">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="16" viewBox="0 0 33 20" fill="none" aria-hidden="true"><path d="M11 0C11 1.06 9.99212 2.64286 8.97187 3.97143C7.66012 5.68571 6.09263 7.18143 4.2955 8.32286C2.948 9.17857 1.3145 10 0 10M0 10C1.3145 10 2.94938 10.8214 4.2955 11.6771C6.09263 12.82 7.66012 14.3157 8.97187 16.0271C9.99212 17.3571 11 18.9429 11 20M0 10H33" stroke="white"/></svg>
+      </button>
+      <button type="button" class="santa-rita-awards-lightbox__nav santa-rita-awards-lightbox__nav--next" data-awards-lightbox-next aria-label="Siguiente">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="16" viewBox="0 0 33 20" fill="none" aria-hidden="true"><path d="M22 0C22 1.06 23.0079 2.64286 24.0281 3.97143C25.3399 5.68571 26.9074 7.18143 28.7045 8.32286C30.052 9.17857 31.6855 10 33 10M33 10C31.6855 10 30.0506 10.8214 28.7045 11.6771C26.9074 12.82 25.3399 14.3157 24.0281 16.0271C23.0079 17.3571 22 18.9429 22 20M33 10H0" stroke="white"/></svg>
+      </button>
+    </dialog>
+  {% endif %}
 </santa-rita-awards-slider>
 
 <script>
@@ -165,6 +246,18 @@
       'santa-rita-awards-slider',
       class SantaRitaAwardsSlider extends HTMLElement {
         connectedCallback() {
+          // Once defined, later instances connect before the parser adds their children.
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+              if (this.isConnected) this.init();
+            }, { once: true });
+            return;
+          }
+          this.init();
+        }
+
+        init() {
+          this.teardown();
           this.viewport = this.querySelector('[data-awards-viewport]');
           this.track = this.querySelector('[data-awards-track]');
           this.slides = Array.from(this.querySelectorAll('[data-awards-slide]'));
@@ -177,7 +270,6 @@
           this.index = 0;
           this.paused = false;
           this.hovered = false;
-          this.events?.abort();
           this.events = new AbortController();
           const { signal } = this.events;
 
@@ -215,12 +307,18 @@
           this.resizeObserver.observe(this.viewport);
           this.resizeObserver.observe(this.slides[0]);
           this.setupVideos();
+          this.setupLightbox();
           this.createDots();
           this.update();
           this.syncAutoplay();
         }
 
         disconnectedCallback() {
+          this.teardown();
+        }
+
+        teardown() {
+          if (this.lightbox?.open) this.lightbox.close();
           this.events?.abort();
           this.resizeObserver?.disconnect();
           clearInterval(this.autoplayTimer);
@@ -275,7 +373,7 @@
             tryPlay(video);
 
             const slide = video.closest('.santa-rita-awards-slide');
-            if (!slide) return;
+            if (!slide || slide.querySelector('[data-awards-open]')) return;
 
             slide.addEventListener('mouseenter', () => video.setAttribute('controls', ''), { signal });
             slide.addEventListener('mouseleave', () => {
@@ -286,6 +384,99 @@
               if (!video.paused) video.removeAttribute('controls');
             }, { signal });
           });
+        }
+
+        setupLightbox() {
+          this.lightbox = this.querySelector('[data-awards-lightbox]');
+          this.zoomables = Array.from(this.querySelectorAll('[data-awards-open]'));
+          if (!this.lightbox || !this.zoomables.length || typeof this.lightbox.showModal !== 'function') return;
+          const { signal } = this.events;
+          const single = this.zoomables.length < 2;
+          const prev = this.lightbox.querySelector('[data-awards-lightbox-prev]');
+          const next = this.lightbox.querySelector('[data-awards-lightbox-next]');
+          this.lightboxFrame = this.lightbox.querySelector('[data-awards-lightbox-frame]');
+          this.lightboxContent = this.lightbox.querySelector('[data-awards-lightbox-content]');
+          this.lightboxLink = this.lightbox.querySelector('[data-awards-lightbox-link]');
+          this.lightboxIndex = 0;
+          if (prev) prev.hidden = single;
+          if (next) next.hidden = single;
+
+          this.zoomables.forEach((item, index) => {
+            item.addEventListener('click', (event) => {
+              event.preventDefault();
+              this.openLightbox(index);
+            }, { signal });
+            item.addEventListener('keydown', (event) => {
+              if (event.key !== 'Enter' && event.key !== ' ') return;
+              event.preventDefault();
+              this.openLightbox(index);
+            }, { signal });
+          });
+
+          prev?.addEventListener('click', () => this.showLightboxItem(this.lightboxIndex - 1), { signal });
+          next?.addEventListener('click', () => this.showLightboxItem(this.lightboxIndex + 1), { signal });
+          this.lightbox.querySelector('[data-awards-lightbox-close]')?.addEventListener('click', () => this.lightbox.close(), { signal });
+          this.lightbox.addEventListener('click', (event) => {
+            if (event.target === this.lightbox) this.lightbox.close();
+          }, { signal });
+          this.lightbox.addEventListener('keydown', (event) => {
+            if (single || event.target.tagName === 'VIDEO') return;
+            if (event.key === 'ArrowLeft') this.showLightboxItem(this.lightboxIndex - 1);
+            if (event.key === 'ArrowRight') this.showLightboxItem(this.lightboxIndex + 1);
+          }, { signal });
+          this.lightbox.addEventListener('close', () => this.lightboxFrame?.replaceChildren(), { signal });
+        }
+
+        openLightbox(index) {
+          this.pause();
+          if (!this.lightbox.open) this.lightbox.showModal();
+          this.showLightboxItem(index);
+        }
+
+        showLightboxItem(index) {
+          const total = this.zoomables.length;
+          if (!total || !this.lightboxFrame) return;
+          this.lightboxIndex = ((index % total) + total) % total;
+          const item = this.zoomables[this.lightboxIndex];
+          const sourceVideo = item.querySelector('video');
+          const ratio = Number.parseFloat(item.dataset.ratio);
+          let media = null;
+
+          if (sourceVideo) {
+            media = sourceVideo.cloneNode(true);
+            media.className = 'santa-rita-awards-lightbox__media';
+            media.removeAttribute('muted');
+            media.removeAttribute('autoplay');
+            media.defaultMuted = false;
+            media.muted = false;
+            media.loop = true;
+            media.playsInline = true;
+            media.controls = true;
+            media.preload = 'auto';
+          } else if (item.dataset.fullSrc) {
+            media = document.createElement('img');
+            media.className = 'santa-rita-awards-lightbox__media';
+            media.src = item.dataset.fullSrc;
+            media.alt = item.dataset.fullAlt || '';
+            media.decoding = 'async';
+          }
+
+          if (!media) return;
+          this.lightboxFrame.style.setProperty('--lb-ratio', ratio > 0 ? String(ratio) : '0.5625');
+          if (this.lightboxLink) {
+            const link = item.dataset.link || '';
+            this.lightboxLink.hidden = !link;
+            if (link) this.lightboxLink.href = link;
+            this.lightboxContent?.classList.toggle('has-link', Boolean(link));
+          }
+          this.lightboxFrame.replaceChildren(media);
+
+          if (media.tagName === 'VIDEO') {
+            media.play().catch(() => {
+              media.muted = true;
+              media.play().catch(() => {});
+            });
+          }
         }
 
         getStep() {
@@ -402,6 +593,33 @@
     line-height: 1.35;
   }
 
+  .santa-rita-awards-slider__button,
+  .santa-rita-awards-slider__button:visited {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 12px 28px;
+    border: 1px solid var(--awards-button-background, #ffffff);
+    border-radius: 6px;
+    background: var(--awards-button-background, #ffffff);
+    color: var(--awards-button-text, #1E0812);
+    font-family: var(--font-body--family);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+  }
+
+  .santa-rita-awards-slider__button:hover,
+  .santa-rita-awards-slider__button:focus-visible {
+    border-color: #B8294F;
+    background: #B8294F;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
   .santa-rita-awards-slider__carousel {
     min-width: 0;
   }
@@ -444,11 +662,21 @@
   }
 
   .santa-rita-awards-slide__media {
+    position: relative;
     overflow: hidden;
     width: 100%;
     aspect-ratio: 3 / 4.08;
     border-radius: 8px;
     background: #080505;
+  }
+
+  .santa-rita-awards-slide__media[data-awards-open] {
+    cursor: zoom-in;
+  }
+
+  .santa-rita-awards-slide__media[data-awards-open]:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
   }
 
   .santa-rita-awards-slide--video .santa-rita-awards-slide__media {
@@ -464,12 +692,55 @@
     object-fit: cover;
   }
 
+  .santa-rita-awards-slide__video:fullscreen {
+    object-fit: contain;
+    background: #000000;
+  }
+
+  .santa-rita-awards-slide__video:-webkit-full-screen {
+    object-fit: contain;
+    background: #000000;
+  }
+
   .santa-rita-awards-slide__image--placeholder {
     opacity: 0.45;
   }
 
+  .santa-rita-awards-slide__expand {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    border-radius: 999px;
+    background: rgb(0 0 0 / 45%);
+    color: #ffffff;
+    opacity: 0.85;
+    pointer-events: none;
+    transition: opacity 0.25s ease, background 0.25s ease;
+  }
+
+  .santa-rita-awards-slide__media[data-awards-open]:hover .santa-rita-awards-slide__expand {
+    opacity: 1;
+    background: #B8294F;
+  }
+
   .santa-rita-awards-slide__caption {
     margin-top: 18px;
+  }
+
+  .santa-rita-awards-slide__caption-link,
+  .santa-rita-awards-slide__caption-link:visited {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .santa-rita-awards-slide__caption-link:hover h3 {
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
 
   .santa-rita-awards-slide__caption h3 {
@@ -558,6 +829,144 @@
     cursor: default;
   }
 
+  html:has(.santa-rita-awards-lightbox[open]) {
+    overflow: hidden;
+  }
+
+  .santa-rita-awards-lightbox {
+    --lb-max-h: 90vh;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    max-width: none;
+    height: 100vh;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #ffffff;
+    overflow: hidden;
+  }
+
+  @supports (height: 1dvh) {
+    .santa-rita-awards-lightbox {
+      --lb-max-h: 90dvh;
+      height: 100dvh;
+    }
+  }
+
+  .santa-rita-awards-lightbox[open] {
+    display: grid;
+    place-items: center;
+  }
+
+  .santa-rita-awards-lightbox::backdrop {
+    background: rgb(10 3 6 / 92%);
+  }
+
+  .santa-rita-awards-lightbox__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .santa-rita-awards-lightbox__content.has-link {
+    --lb-link-space: 68px;
+  }
+
+  .santa-rita-awards-lightbox__frame {
+    width: auto;
+    max-width: 92vw;
+    height: min(calc(var(--lb-max-h) - var(--lb-link-space, 0px)), calc(92vw / var(--lb-ratio, 0.5625)));
+    aspect-ratio: var(--lb-ratio, 0.5625);
+    overflow: hidden;
+    border-radius: 8px;
+    background: #000000;
+  }
+
+  .santa-rita-awards-lightbox__media {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000000;
+  }
+
+  .santa-rita-awards-lightbox__link,
+  .santa-rita-awards-lightbox__link:visited {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 28px;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #1E0812;
+    font-family: var(--font-body--family);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+
+  .santa-rita-awards-lightbox__link:hover,
+  .santa-rita-awards-lightbox__link:focus-visible {
+    background: #B8294F;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .santa-rita-awards-lightbox__link[hidden] {
+    display: none;
+  }
+
+  .santa-rita-awards-lightbox__close,
+  .santa-rita-awards-lightbox__nav {
+    position: absolute;
+    display: grid;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    place-items: center;
+    border: 1px solid rgb(255 255 255 / 45%);
+    border-radius: 999px;
+    background: rgb(0 0 0 / 35%);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.25s ease, border-color 0.25s ease;
+  }
+
+  .santa-rita-awards-lightbox__close:hover,
+  .santa-rita-awards-lightbox__nav:hover {
+    border-color: #B8294F;
+    background: #B8294F;
+  }
+
+  .santa-rita-awards-lightbox__close {
+    top: 20px;
+    right: 20px;
+  }
+
+  .santa-rita-awards-lightbox__nav {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .santa-rita-awards-lightbox__nav[hidden] {
+    display: none;
+  }
+
+  .santa-rita-awards-lightbox__nav--prev {
+    left: 24px;
+  }
+
+  .santa-rita-awards-lightbox__nav--next {
+    right: 24px;
+  }
+
   @media screen and (max-width: 989px) {
     .santa-rita-awards-slider__container {
       grid-template-columns: 1fr;
@@ -588,12 +997,26 @@
       font-size: 16px;
     }
 
+    .santa-rita-awards-slider__button,
+    .santa-rita-awards-slider__button:visited {
+      margin-top: 24px;
+      padding: 10px 22px;
+      font-size: 16px;
+    }
+
     .santa-rita-awards-slider__track {
       --awards-slide-gap: 16px;
     }
 
     .santa-rita-awards-slide {
       flex-basis: calc((100% - var(--awards-slide-gap)) / 2);
+    }
+
+    .santa-rita-awards-slide__expand {
+      top: 8px;
+      right: 8px;
+      width: 30px;
+      height: 30px;
     }
 
     .santa-rita-awards-slider__footer {
@@ -620,6 +1043,25 @@
 
     .santa-rita-awards-slide__caption p{
       font-size: 14px;
+    }
+
+    .santa-rita-awards-lightbox__close {
+      top: 12px;
+      right: 12px;
+    }
+
+    .santa-rita-awards-lightbox__close,
+    .santa-rita-awards-lightbox__nav {
+      width: 44px;
+      height: 44px;
+    }
+
+    .santa-rita-awards-lightbox__nav--prev {
+      left: 8px;
+    }
+
+    .santa-rita-awards-lightbox__nav--next {
+      right: 8px;
     }
   }
 {% endstylesheet %}
@@ -659,6 +1101,55 @@
       "id": "text",
       "label": "Texto",
       "default": "Descubre los vinos de selección."
+    },
+    {
+      "type": "header",
+      "content": "Botón"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Texto del botón",
+      "info": "Deja el texto o el enlace vacío para ocultar el botón."
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Enlace del botón"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Fondo del botón",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Texto del botón",
+      "default": "#1E0812"
+    },
+    {
+      "type": "header",
+      "content": "Vista ampliada"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_lightbox",
+      "label": "Ampliar fotos y videos al hacer clic",
+      "info": "Se abren completos, sin recorte, en su formato original (un 1080 × 1920 se ve vertical completo), con flechas para pasar de uno a otro.",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "lightbox_link_label",
+      "label": "Texto del botón en la vista ampliada",
+      "info": "Aparece solo en los slides con enlace.",
+      "default": "Ver más"
+    },
+    {
+      "type": "header",
+      "content": "Estilo"
     },
     {
       "type": "range",

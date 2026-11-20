@@ -1,0 +1,587 @@
+{% comment %}
+  Santa Rita promo slider: carrusel de banners promocionales (3 visibles en desktop,
+  formato 392x316). Misma estética que santa-rita-awards-slider (fondo, flechas, dots).
+{% endcomment %}
+{% liquid
+  assign slider_id = 'SantaRitaPromoSlider-' | append: section.id
+%}
+
+<santa-rita-promo-slider
+  id="{{ slider_id }}"
+  class="santa-rita-promo-slider"
+  data-autoplay-desktop="{{ section.settings.autoplay_desktop }}"
+  data-autoplay-mobile="{{ section.settings.autoplay_mobile }}"
+  data-autoplay-speed="{{ section.settings.autoplay_speed }}"
+  style="
+    --promo-background: {{ section.settings.background }};
+    --promo-text-color: {{ section.settings.text_color }};
+    --promo-padding-top: {{ section.settings.padding_top }}px;
+    --promo-padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="santa-rita-promo-slider__container">
+    {% if section.settings.heading != blank or section.settings.text != blank %}
+      <div class="santa-rita-promo-slider__intro">
+        {% if section.settings.heading != blank %}
+          <h2>{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.text != blank %}
+          <p>{{ section.settings.text }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="santa-rita-promo-slider__viewport" data-promo-viewport>
+      <div class="santa-rita-promo-slider__track" data-promo-track>
+        {% for block in section.blocks %}
+          {% liquid
+            assign block_settings = block.settings
+            assign tag_name = 'div'
+            if block_settings.link != blank
+              assign tag_name = 'a'
+            endif
+            assign image_alt = block_settings.image.alt | default: block_settings.title | escape
+          %}
+          <{{ tag_name }}
+            class="santa-rita-promo-slide"
+            {% if block_settings.link != blank %}
+              href="{{ block_settings.link }}"
+            {% endif %}
+            data-promo-slide
+            {{ block.shopify_attributes }}
+          >
+            <div class="santa-rita-promo-slide__media">
+              {% if block_settings.image != blank %}
+                {{
+                  block_settings.image
+                  | image_url: width: 800
+                  | image_tag:
+                    widths: '400, 600, 800',
+                    sizes: '(min-width: 990px) 400px, (min-width: 750px) 46vw, 86vw',
+                    loading: 'lazy',
+                    alt: image_alt,
+                    class: 'santa-rita-promo-slide__image'
+                }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'santa-rita-promo-slide__image santa-rita-promo-slide__image--placeholder' }}
+              {% endif %}
+            </div>
+
+            {% if block_settings.title != blank or block_settings.subtitle != blank %}
+              <div class="santa-rita-promo-slide__caption">
+                {% if block_settings.title != blank %}
+                  <h3>{{ block_settings.title }}</h3>
+                {% endif %}
+                {% if block_settings.subtitle != blank %}
+                  <p>{{ block_settings.subtitle }}</p>
+                {% endif %}
+              </div>
+            {% endif %}
+          </{{ tag_name }}>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% if section.blocks.size > 1 %}
+      <div class="santa-rita-promo-slider__footer" data-promo-footer>
+        <div class="santa-rita-promo-slider__dots" data-promo-dots aria-label="Paginación"></div>
+        <div class="santa-rita-promo-slider__arrows">
+          <button type="button" data-promo-prev aria-label="Slide anterior">
+            <span aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="20" viewBox="0 0 33 20" fill="none">
+                <path d="M11 0C11 1.06 9.99212 2.64286 8.97187 3.97143C7.66012 5.68571 6.09263 7.18143 4.2955 8.32286C2.948 9.17857 1.3145 10 0 10M0 10C1.3145 10 2.94938 10.8214 4.2955 11.6771C6.09263 12.82 7.66012 14.3157 8.97187 16.0271C9.99212 17.3571 11 18.9429 11 20M0 10H33" stroke="currentColor"/>
+              </svg>
+            </span>
+          </button>
+          <button type="button" data-promo-next aria-label="Slide siguiente">
+            <span aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="20" viewBox="0 0 33 20" fill="none">
+                <path d="M22 0C22 1.06 23.0079 2.64286 24.0281 3.97143C25.3399 5.68571 26.9074 7.18143 28.7045 8.32286C30.052 9.17857 31.6855 10 33 10M33 10C31.6855 10 30.0506 10.8214 28.7045 11.6771C26.9074 12.82 25.3399 14.3157 24.0281 16.0271C23.0079 17.3571 22 18.9429 22 20M33 10H0" stroke="currentColor"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</santa-rita-promo-slider>
+
+<script>
+  if (!customElements.get('santa-rita-promo-slider')) {
+    customElements.define(
+      'santa-rita-promo-slider',
+      class SantaRitaPromoSlider extends HTMLElement {
+        connectedCallback() {
+          this.viewport = this.querySelector('[data-promo-viewport]');
+          this.track = this.querySelector('[data-promo-track]');
+          this.slides = Array.from(this.querySelectorAll('[data-promo-slide]'));
+          this.footer = this.querySelector('[data-promo-footer]');
+          this.prevButton = this.querySelector('[data-promo-prev]');
+          this.nextButton = this.querySelector('[data-promo-next]');
+          this.dotsContainer = this.querySelector('[data-promo-dots]');
+          this.mobileQuery = window.matchMedia('(max-width: 749px)');
+          this.motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+          this.index = 0;
+          this.paused = false;
+          this.hovered = false;
+          this.events?.abort();
+          this.events = new AbortController();
+          const { signal } = this.events;
+
+          if (!this.viewport || !this.track || !this.slides.length) return;
+
+          this.prevButton?.addEventListener('click', () => this.goTo(this.index - 1), { signal });
+          this.nextButton?.addEventListener('click', () => this.goTo(this.index + 1), { signal });
+          this.viewport.addEventListener('scroll', () => this.update(), { passive: true, signal });
+          this.viewport.addEventListener('pointerdown', () => this.pause(), { passive: true, signal });
+          this.addEventListener('focusin', () => this.pause(), { signal });
+          this.addEventListener('pointerenter', (event) => {
+            if (event.pointerType !== 'mouse') return;
+            this.hovered = true;
+            this.syncAutoplay();
+          }, { signal });
+          this.addEventListener('pointerleave', () => {
+            this.hovered = false;
+            this.syncAutoplay();
+          }, { signal });
+          document.addEventListener('visibilitychange', () => this.syncAutoplay(), { signal });
+          this.mobileQuery.addEventListener('change', () => this.syncAutoplay(), { signal });
+          this.resizeObserver = new ResizeObserver(() => {
+            this.createDots();
+            this.update();
+            this.syncAutoplay();
+          });
+          this.resizeObserver.observe(this.viewport);
+          this.createDots();
+          this.update();
+          this.syncAutoplay();
+        }
+
+        disconnectedCallback() {
+          this.events?.abort();
+          this.resizeObserver?.disconnect();
+          clearInterval(this.autoplayTimer);
+        }
+
+        pause() {
+          this.paused = true;
+          this.syncAutoplay();
+        }
+
+        syncAutoplay() {
+          clearInterval(this.autoplayTimer);
+          const enabled = (this.mobileQuery.matches ? this.dataset.autoplayMobile : this.dataset.autoplayDesktop) === 'true';
+          const available = enabled && !this.motionQuery.matches && this.getMaxIndex() > 0;
+          if (!available || this.paused || this.hovered || document.hidden) return;
+          const speed = (Number(this.dataset.autoplaySpeed) || 5) * 1000;
+          this.autoplayTimer = setInterval(() => {
+            this.goTo(this.index >= this.getMaxIndex() ? 0 : this.index + 1, true);
+          }, speed);
+        }
+
+        getStep() {
+          const slide = this.slides[0];
+          if (!slide) return this.viewport.clientWidth;
+          const styles = window.getComputedStyle(this.track);
+          const gap = Number.parseFloat(styles.columnGap || styles.gap || '0');
+          return slide.getBoundingClientRect().width + gap;
+        }
+
+        getMaxTranslate() {
+          return Math.max(0, this.viewport.scrollWidth - this.viewport.clientWidth);
+        }
+
+        getMaxIndex() {
+          const maxScroll = this.getMaxTranslate();
+          return maxScroll <= 1 ? 0 : Math.ceil((maxScroll - 1) / this.getStep());
+        }
+
+        createDots() {
+          if (!this.dotsContainer) return;
+          const total = this.getMaxIndex() + 1;
+          if (this.dotsContainer.children.length === total) return;
+          this.dotsContainer.innerHTML = '';
+          for (let index = 0; index < total; index += 1) {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.setAttribute('aria-label', `Ir al slide ${index + 1}`);
+            button.addEventListener('click', () => this.goTo(index));
+            this.dotsContainer.append(button);
+          }
+        }
+
+        goTo(index, automatic = false) {
+          if (!automatic) this.pause();
+          const targetIndex = Math.min(Math.max(index, 0), this.getMaxIndex());
+          const position = Math.min(targetIndex * this.getStep(), this.getMaxTranslate());
+          this.viewport.scrollTo({
+            left: position,
+            behavior: this.motionQuery.matches ? 'instant' : 'smooth',
+          });
+        }
+
+        update() {
+          const maxIndex = this.getMaxIndex();
+          const position = Math.abs(this.viewport.scrollLeft);
+          this.index = this.getMaxTranslate() - position <= 1
+            ? maxIndex : Math.min(maxIndex, Math.round(position / this.getStep()));
+
+          if (this.footer) this.footer.hidden = maxIndex === 0;
+
+          Array.from(this.dotsContainer?.children || []).forEach((dot, index) => {
+            dot.classList.toggle('is-active', index === this.index);
+            dot.setAttribute('aria-current', index === this.index ? 'true' : 'false');
+          });
+
+          if (this.prevButton) this.prevButton.disabled = this.index === 0;
+          if (this.nextButton) this.nextButton.disabled = this.index === maxIndex;
+        }
+      }
+    );
+  }
+</script>
+
+{% stylesheet %}
+  .santa-rita-promo-slider {
+    display: block;
+    overflow: hidden;
+    --promo-gutter: clamp(24px, 6.8vw, 120px);
+    --promo-gap: 24px;
+    --promo-per-view: 3;
+    background: var(--promo-background);
+    color: var(--promo-text-color);
+  }
+
+  .santa-rita-promo-slider__container {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding: var(--promo-padding-top) var(--promo-gutter) var(--promo-padding-bottom);
+  }
+
+  .santa-rita-promo-slider__intro {
+    margin-bottom: 36px;
+  }
+
+  .santa-rita-promo-slider__intro h2 {
+    margin: 0;
+    color: inherit;
+    font-family: var(--font-heading--family);
+    font-size: clamp(30px, 3.4vw, 44px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0;
+  }
+
+  .santa-rita-promo-slider__intro p {
+    margin: 14px 0 0;
+    color: inherit;
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  .santa-rita-promo-slider__viewport {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .santa-rita-promo-slider__viewport::-webkit-scrollbar {
+    display: none;
+  }
+
+  .santa-rita-promo-slider__track {
+    display: flex;
+    gap: var(--promo-gap);
+    align-items: flex-start;
+  }
+
+  .santa-rita-promo-slide {
+    flex: 0 0 calc((100% - (var(--promo-gap) * (var(--promo-per-view) - 1))) / var(--promo-per-view));
+    min-width: 0;
+    scroll-snap-align: start;
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .santa-rita-promo-slide:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .santa-rita-promo-slide__media {
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 392 / 316;
+    border-radius: 8px;
+    background: #080505;
+  }
+
+  .santa-rita-promo-slide__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  a.santa-rita-promo-slide:hover .santa-rita-promo-slide__image {
+    transform: scale(1.03);
+  }
+
+  .santa-rita-promo-slide__image--placeholder {
+    opacity: 0.45;
+  }
+
+  .santa-rita-promo-slide__caption {
+    margin-top: 18px;
+  }
+
+  .santa-rita-promo-slide__caption h3 {
+    margin: 0;
+    color: #F6EDD9;
+    font-family: var(--font-body--family);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .santa-rita-promo-slide__caption p {
+    margin: 6px 0 0;
+    color: #F6EDD9;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .santa-rita-promo-slider__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 34px;
+    margin-top: 32px;
+  }
+
+  .santa-rita-promo-slider__footer[hidden] {
+    display: none;
+  }
+
+  .santa-rita-promo-slider__dots {
+    display: flex;
+    gap: 7px;
+  }
+
+  .santa-rita-promo-slider__dots button {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border: 1px solid rgb(255 255 255 / 90%);
+    border-radius: 999px;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .santa-rita-promo-slider__dots button.is-active {
+    background: #ffffff;
+  }
+
+  .santa-rita-promo-slider__arrows {
+    display: flex;
+    gap: 14px;
+  }
+
+  .santa-rita-promo-slider__arrows button {
+    display: grid;
+    width: 58px;
+    height: 58px;
+    place-items: center;
+    padding: 0;
+    border: 1px solid rgb(255 255 255 / 38%);
+    border-radius: 999px;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.25s ease, border-color 0.25s ease;
+  }
+
+  .santa-rita-promo-slider__arrows button:not(:disabled):hover {
+    border-color: #B8294F;
+    background: #B8294F;
+  }
+
+  .santa-rita-promo-slider__arrows button:disabled {
+    opacity: 0.32;
+    cursor: default;
+  }
+
+  @media screen and (max-width: 989px) {
+    .santa-rita-promo-slider {
+      --promo-per-view: 2;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .santa-rita-promo-slider {
+      --promo-gap: 14px;
+      --promo-per-view: 1.15;
+    }
+
+    .santa-rita-promo-slider__container {
+      padding: calc(var(--promo-padding-top) * 0.7) 20px calc(var(--promo-padding-bottom) * 0.7);
+    }
+
+    .santa-rita-promo-slider__intro {
+      margin-bottom: 24px;
+    }
+
+    .santa-rita-promo-slider__intro h2 {
+      font-size: 24px;
+    }
+
+    .santa-rita-promo-slider__intro p {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .santa-rita-promo-slider__footer {
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .santa-rita-promo-slider__arrows button {
+      width: 46px;
+      height: 46px;
+    }
+
+    .santa-rita-promo-slider__arrows button svg {
+      width: 20px;
+    }
+
+    .santa-rita-promo-slide__caption h3 {
+      font-size: 18px;
+    }
+
+    .santa-rita-promo-slide__caption p {
+      font-size: 14px;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santa Rita promo slider",
+  "tag": "section",
+  "class": "section-santa-rita-promo-slider",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Imágenes recomendadas: 392 x 316 px (o múltiplos, ej. 784 x 632 para pantallas retina). Se muestran 3 por vista en desktop, 2 en tablet y 1 en móvil."
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Título"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Texto"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_desktop",
+      "label": "Autoplay en desktop",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_mobile",
+      "label": "Autoplay en móvil",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "Velocidad autoplay",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "s"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Fondo",
+      "default": "#1E0812"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Texto",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espacio superior",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 60,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espacio inferior",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 48,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen (392 x 316 px)"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Enlace"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título bajo la imagen (opcional)"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtítulo bajo la imagen (opcional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Santa Rita promo slider",
+      "blocks": [
+        { "type": "slide" },
+        { "type": "slide" },
+        { "type": "slide" }
+      ]
+    }
+  ]
+}
+{% endschema %}

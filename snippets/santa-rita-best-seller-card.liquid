@@ -86,19 +86,6 @@
     endif
   endfor
 
-  # Preferir la presentación por caja (unidades_por_caja > 1) cuando esté disponible
-  for presentation_variant in product.variants
-    assign preferred_units_metafield = presentation_variant.metafields.custom.unidades_por_caja
-    assign preferred_units_value = preferred_units_metafield.value | default: preferred_units_metafield
-    assign preferred_units = preferred_units_value | default: 1 | plus: 0
-
-    if preferred_units > 1 and presentation_variant.available
-      assign selected_variant = presentation_variant
-      break
-    endif
-  endfor
-
-
 %}
 
 {% capture discount_badges %}

@@ -44,7 +44,7 @@
               %}
 
               {% if info_title != blank %}
-                <details class="santa-rita-product-more-info__item">
+                <details class="santa-rita-product-more-info__item"{% if section.settings.open_by_default %} open{% endif %}>
                   <summary class="santa-rita-product-more-info__summary">
                     <span>{{ info_title }}</span>
                     <span class="santa-rita-product-more-info__icon" aria-hidden="true"></span>
@@ -73,7 +73,7 @@
           {% endif %}
 
           {% if expert_comment_metafield != blank %}
-            <details class="santa-rita-product-more-info__item">
+            <details class="santa-rita-product-more-info__item"{% if section.settings.open_by_default %} open{% endif %}>
               <summary class="santa-rita-product-more-info__summary">
                 <span>Comentario experto</span>
                 <span class="santa-rita-product-more-info__icon" aria-hidden="true"></span>
@@ -86,7 +86,7 @@
           {% endif %}
 
           {% if technical_data_metafield != blank %}
-            <details class="santa-rita-product-more-info__item">
+            <details class="santa-rita-product-more-info__item"{% if section.settings.open_by_default %} open{% endif %}>
               <summary class="santa-rita-product-more-info__summary">
                 <span>Datos técnicos</span>
                 <span class="santa-rita-product-more-info__icon" aria-hidden="true"></span>
@@ -99,7 +99,7 @@
           {% endif %}
 
           {% if pairing_recommendation_metafield != blank %}
-            <details class="santa-rita-product-more-info__item">
+            <details class="santa-rita-product-more-info__item"{% if section.settings.open_by_default %} open{% endif %}>
               <summary class="santa-rita-product-more-info__summary">
                 <span>Maridaje recomendado</span>
                 <span class="santa-rita-product-more-info__icon" aria-hidden="true"></span>
@@ -112,7 +112,7 @@
           {% endif %}
 
           {% if recognitions_metafield != blank %}
-            <details class="santa-rita-product-more-info__item">
+            <details class="santa-rita-product-more-info__item"{% if section.settings.open_by_default %} open{% endif %}>
               <summary class="santa-rita-product-more-info__summary">
                 <span>Reconocimientos</span>
                 <span class="santa-rita-product-more-info__icon" aria-hidden="true"></span>
@@ -465,6 +465,12 @@
       "id": "heading",
       "label": "Titulo",
       "default": "Mas informacion del producto"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_by_default",
+      "label": "Mostrar desplegado por defecto",
+      "default": true
     },
     {
       "type": "paragraph",

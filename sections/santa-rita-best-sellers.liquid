@@ -35,6 +35,7 @@
 {% if rendered_product_count > 0 or request.design_mode %}
 <santa-rita-best-sellers
   class="santa-rita-best-sellers"
+  style="--sr-bs-pt: {{ section.settings.padding_top | default: 64 }}px; --sr-bs-pb: {{ section.settings.padding_bottom | default: 64 }}px; --sr-bs-pt-mobile: {{ section.settings.padding_top_mobile | default: 42 }}px; --sr-bs-pb-mobile: {{ section.settings.padding_bottom_mobile | default: 48 }}px;"
   {% if section.settings.autoplay %}
     autoplay
     autoplay-speed="{{ section.settings.autoplay_speed | times: 1000 }}"
@@ -189,7 +190,7 @@
     width: 100%;
     max-width: 1440px;
     margin-inline: auto;
-    padding: 64px clamp(24px, 6.8vw, 120px) 64px;
+    padding: var(--sr-bs-pt, 64px) clamp(24px, 6.8vw, 120px) var(--sr-bs-pb, 64px);
   }
 
   .santa-rita-best-sellers__header {
@@ -588,7 +589,7 @@
 
   @media screen and (max-width: 749px) {
     .santa-rita-best-sellers__container {
-      padding: 42px 20px 48px;
+      padding: var(--sr-bs-pt-mobile, 42px) 20px var(--sr-bs-pb-mobile, 48px);
     }
 
     .santa-rita-best-sellers__header {
@@ -880,6 +881,51 @@
       "max": 12,
       "step": 1,
       "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Márgenes",
+      "info": "Espacio arriba y abajo de la sección. No cambia la página del carrito."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Margen superior en escritorio",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 64,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Margen inferior en escritorio",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 64,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Margen superior en móvil",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "default": 42,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Margen inferior en móvil",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "default": 48,
+      "unit": "px"
     },
     {
       "type": "header",
