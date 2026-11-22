@@ -693,6 +693,7 @@
         "slide_UAxDni": {
           "type": "slide",
           "name": "Pewen",
+          "disabled": true,
           "settings": {
             "media_type": "image",
             "image": "shopify://shop_images/15.webp",
@@ -764,7 +765,6 @@
         "slide_UABFmq",
         "slide_YbWajz"
       ],
-      "disabled": true,
       "name": "marcas",
       "settings": {
         "autoplay_desktop": false,
@@ -882,7 +882,7 @@
     },
     "santa_rita_best_sellers_DVUeHy": {
       "type": "santa-rita-best-sellers",
-      "disabled": true,
+      "name": "Carrusel Ultra Premium",
       "settings": {
         "product_card_image_scale": 100,
         "heading": "Vinos Ultra Premium",
