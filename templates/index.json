@@ -1,1 +1,1076 @@
-{"sections":{"santa_rita_banner_slider":{"type":"santa-rita-banner-slider","blocks":{"slide_C9bfHe":{"type":"slide","name":"120 Latas","settings":{"media_type":"video","video":"shopify:\/\/files\/videos\/120 latas video banner shopify ult (1).mp4","video_mobile":"shopify:\/\/files\/videos\/800X800 Video Latas_7927cd98-65ab-48fd-8079-75ee4e2682c6.mp4","video_asset_name":"","heading":"","text":"","button_label":"","button_link":"","banner_link":"shopify:\/\/collections\/ready-to-drink","banner_link_label":"Ver más"}},"slide_rrczQR":{"type":"slide","name":"Martes de saldos","disabled":true,"settings":{"media_type":"image","image":"shopify:\/\/shop_images\/BANNERS_DESKTOP_MARTES_16.png","image_mobile":"shopify:\/\/shop_images\/BANNER_MOBILE_MARTES_16.png","video_asset_name":"","heading":"","text":"","button_label":"","button_link":"","banner_link":"shopify:\/\/collections\/saldos-de-exportacion","banner_link_label":"Ver más"}},"slide_intro":{"type":"slide","name":"test black","disabled":true,"settings":{"media_type":"video","video":"shopify:\/\/files\/videos\/videotest black.mp4","video_mobile":"shopify:\/\/files\/videos\/mobile_bannershopify (1).mp4","video_asset_name":"","heading":"","text":"","button_label":"","button_link":"shopify:\/\/collections\/all","banner_link":"shopify:\/\/collections\/ofertas","banner_link_label":"Ver más"}},"slide_rkeWwR":{"type":"slide","name":"Medalla Real","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/Medalla_Real_Reserva.webp","image_mobile":"shopify:\/\/shop_images\/Medalla_Real_Reserva_803171f1-0fdd-4f49-b53c-94e0ef749c70.webp","video_asset_name":"","heading":"","text":"","button_label":"","button_link":"","banner_link":"shopify:\/\/collections\/vinos-medalla-real","banner_link_label":"Ver más"}},"slide_FKmYi9":{"type":"slide","name":"Amaranta","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/Espumante_Amaranta.webp","image_mobile":"shopify:\/\/shop_images\/Espumante_Amaranta_76c89438-c481-4733-b3a7-e669a5d5e691.webp","video_asset_name":"","heading":"","text":"","button_label":"","button_link":"","banner_link":"shopify:\/\/collections\/ganadores-sro","banner_link_label":"Ver más"}},"slide_JzbzGd":{"type":"slide","name":"forbes","disabled":true,"settings":{"media_type":"video","video":"shopify:\/\/files\/videos\/1920x620.mp4","video_mobile":"shopify:\/\/files\/videos\/800x800.mp4","video_asset_name":"","heading":"","text":"","button_label":"","button_link":"","banner_link":"shopify:\/\/collections\/ganadores-sro","banner_link_label":"Ver más"}},"slide_CTczBP":{"type":"slide","name":"Escudo CR","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/Escudo_de_Casa_Real_1.webp","image_mobile":"shopify:\/\/shop_images\/Escudo_de_Casa_Real_2.webp","video_asset_name":"","heading":"","text":"","button_label":"","button_link":"","banner_link":"shopify:\/\/collections\/vinos-escudo-de-casa-real","banner_link_label":"Ver más"}}},"block_order":["slide_C9bfHe","slide_rrczQR","slide_intro","slide_rkeWwR","slide_FKmYi9","slide_JzbzGd","slide_CTczBP"],"settings":{"height_mode":"custom","ratio_width":1920,"ratio_height":620,"ratio_mobile_width":800,"ratio_mobile_height":800,"max_height_vh":100,"height_desktop":160,"height_mobile":460,"navigation":"both","dots_position":"right","autoplay":true,"autoplay_speed":12,"content_position":"left","content_max_width":640,"overlay_opacity":5,"text_color":"#ffffff","button_background":"#9b173f","button_text_color":"#ffffff"}},"santa_rita_best_sellers":{"type":"santa-rita-best-sellers","disabled":true,"name":"Black week productos","settings":{"product_card_image_scale":100,"heading":"Ofertas Black Friday","text":"Es el momento perfecto para llevar tus favoritos a precios especiales.","products":[],"collection":"ganadores-sro","max_products":12,"padding_top":64,"padding_bottom":64,"padding_top_mobile":42,"padding_bottom_mobile":48,"autoplay":true,"autoplay_speed":5,"infinite_loop":true,"pack_label":"x12 un.","unit_price_label":"$2.970","liter_price_label":"$3.960","rating_count":"134","excluded_collections":[],"excluded_tags":""}},"santa_rita_best_sellers_nR6Laz":{"type":"santa-rita-best-sellers","name":"Nuevos Lanzamientos","settings":{"product_card_image_scale":100,"heading":"Nuevos lanzamientos","text":"Explora los últimos ingresos.","products":["coctel-120-spritz-aperitivo-rosato-lata-350cc","coctel-120-spritz-blanco-tropical-lata-350cc","coctel-120-spritz-tinto-de-verano-lata-350cc","coctel-120-3-medallas-caramel-macchiato","coctel-120-3-medallas-chocolate-naranja","escudo-de-casa-real-chardonnay","escudo-de-casa-real-sauvignon-blanc","espumante-carmen-frida-kahlo-zero","vino-blanco-carmen-frida-kahlo-zero-x6","vino-tinto-carmen-frida-kahlo-zero-x6"],"collection":"all","max_products":8,"padding_top":64,"padding_bottom":64,"padding_top_mobile":24,"padding_bottom_mobile":48,"autoplay":true,"autoplay_speed":5,"infinite_loop":true,"pack_label":"x12 un.","unit_price_label":"$2.970","liter_price_label":"$3.960","rating_count":"134","excluded_collections":[],"excluded_tags":""}},"santa_rita_awards_slider_dPzpD7":{"type":"santa-rita-awards-slider","blocks":{"slide_RtRQtm":{"type":"slide","settings":{"media_type":"video","video":"shopify:\/\/files\/videos\/test1_fd4b3805-48ef-4064-93ed-c906d305063a.mp4","video_asset_name":"","title":"","subtitle":"","link":"shopify:\/\/collections\/ready-to-drink"}},"slide_DrRdit":{"type":"slide","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/120_Spritz_Latas.png","video_asset_name":"","title":"","subtitle":"","link":"shopify:\/\/collections\/ready-to-drink"}},"slide_JV3HVJ":{"type":"slide","settings":{"media_type":"video","video":"shopify:\/\/files\/videos\/2 (1).mp4","video_asset_name":"","title":"","subtitle":"","link":"shopify:\/\/collections\/ready-to-drink"}},"slide_9tWBQY":{"type":"slide","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/120_Latas_Spritz_1.webp","video_asset_name":"","title":"","subtitle":"","link":"shopify:\/\/collections\/ready-to-drink"}},"slide_Tajw4Y":{"type":"slide","settings":{"media_type":"video","video":"shopify:\/\/files\/videos\/120 Latas Spritz.mp4","video_asset_name":"","title":"","subtitle":"","link":"shopify:\/\/collections\/ready-to-drink"}},"slide_Gz9Eyw":{"type":"slide","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/120_Aperitivo_Rosato.webp","video_asset_name":"","title":"","subtitle":"","link":"shopify:\/\/collections\/ready-to-drink"}},"slide_waPgL4":{"type":"slide","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/120_Tinot_de_Verano.webp","video_asset_name":"","title":"","subtitle":"","link":"shopify:\/\/collections\/ready-to-drink"}},"slide_aAcw7m":{"type":"slide","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/120_Blanco_Tropical.webp","video_asset_name":"","title":"","subtitle":"","link":"shopify:\/\/collections\/ready-to-drink"}},"slide_NCxhnx":{"type":"slide","disabled":true,"settings":{"media_type":"video","video":"shopify:\/\/files\/videos\/SR_DIGITAL 02.mp4","video_asset_name":"","title":"Escudo de Casa Real","subtitle":"Chardonnay","link":"shopify:\/\/collections\/vinos-escudo-de-casa-real"}},"slide_AdpFiK":{"type":"slide","disabled":true,"settings":{"media_type":"image","image":"shopify:\/\/shop_images\/vinos_premiados_mundialmente_1.png","video_asset_name":"","title":"Casa Real","subtitle":"Cabernet Sauvignon","link":"shopify:\/\/products\/vino-tinto-casa-real-reserva-especial-cabernet-sauvignon"}},"slide_tr4zW8":{"type":"slide","disabled":true,"settings":{"media_type":"image","image":"shopify:\/\/shop_images\/vinos_premiados_mundialmente_27c15c39-432e-4a4b-a017-8d8ae648a9e1.png","video_asset_name":"","title":"Triple C","subtitle":"Red Blend","link":"shopify:\/\/products\/vino-tinto-carmen-triple-c-red-blend"}}},"block_order":["slide_RtRQtm","slide_DrRdit","slide_JV3HVJ","slide_9tWBQY","slide_Tajw4Y","slide_Gz9Eyw","slide_waPgL4","slide_aAcw7m","slide_NCxhnx","slide_AdpFiK","slide_tr4zW8"],"name":"120 Latas slider","settings":{"autoplay_desktop":false,"autoplay_mobile":false,"show_stars":false,"heading":"Nuevo 120 Spritz","text":"Tres variedades, refrescantes, prácticas y listas para disfrutar en cualquier ocasión. ¡Encuentra tu favorita y disfruta lo nuevo!","button_label":"Comprar Ahora","button_link":"shopify:\/\/collections\/ready-to-drink","button_background":"#ffffff","button_text_color":"#1e0812","enable_lightbox":true,"lightbox_link_label":"Comprar ahora","card_width":250,"background":"#1e0812","text_color":"#ffffff"}},"santa_rita_best_sellers_4gPU99":{"type":"santa-rita-best-sellers","name":"productos","settings":{"product_card_image_scale":100,"heading":"Santa Rita Days","text":"Descubre una selección de vinos llenos de carácter.","products":[],"collection":"ganadores-sro","max_products":12,"padding_top":64,"padding_bottom":64,"padding_top_mobile":42,"padding_bottom_mobile":48,"autoplay":true,"autoplay_speed":5,"infinite_loop":true,"pack_label":"x12 un.","unit_price_label":"$2.970","liter_price_label":"$3.960","rating_count":"134","excluded_collections":[],"excluded_tags":""}},"santa_rita_promo_slider_bDxef6":{"type":"santa-rita-promo-slider","blocks":{"slide_7iRafW":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/escudo_de_casa_real_8a9d1312-d8f3-4df8-8811-d14683a6c3af.webp","link":"shopify:\/\/collections\/vinos-escudo-de-casa-real","title":"","subtitle":""}},"slide_h43iWJ":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/medalla_real_r_2.webp","link":"shopify:\/\/collections\/ready-to-drink","title":"","subtitle":""}},"slide_HEhrWM":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/medalla_real_r_fd15575c-26fb-4e36-af8e-7903e110d411.png","link":"shopify:\/\/collections\/vinos-medalla-real","title":"","subtitle":""}},"slide_9idB77":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/amaranta_83d9f498-4e40-47d0-979d-346f7b631754.png","link":"shopify:\/\/collections\/espumantes","title":"","subtitle":""}},"slide_zFx49D":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/medalla_real_r_3.webp","link":"shopify:\/\/collections\/destilados-licores","title":"","subtitle":""}},"slide_XxdTBc":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/banner_cateogrias_shopify.png","link":"shopify:\/\/collections\/cervezas","title":"","subtitle":""}},"promo_slide_1":{"type":"slide","name":"Escudo de casa real","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Escudo_de_casa_real_0e724e98-64c9-46e3-860d-7dd3203d84d8.webp","link":"shopify:\/\/collections\/vinos-escudo-de-casa-real","title":"","subtitle":""}},"slide_3kg9CU":{"type":"slide","name":"Medalla real","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/medalla_real_reserva_15818480-2460-4aed-92a2-8ef6a0520bda.webp","link":"shopify:\/\/collections\/vinos-medalla-real","title":"","subtitle":""}},"promo_slide_2":{"type":"slide","name":"Espumantes","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/amaranta_949032bf-a578-49f8-985c-1b8182a36578.webp","link":"shopify:\/\/collections\/espumantes","title":"","subtitle":""}},"promo_slide_3":{"type":"slide","name":"Carmen GR","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/carmen_gran_reserva.webp","link":"shopify:\/\/collections\/vinos-carmen-gran-reserva","title":"","subtitle":""}},"slide_dTbdTA":{"type":"slide","name":"Latas","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/amaranta_lata_real_r.webp","link":"shopify:\/\/collections\/ready-to-drink","title":"","subtitle":""}},"slide_PBxn6D":{"type":"slide","name":"Aceite de oliva","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/aceite_de_oliva.webp","link":"shopify:\/\/collections\/aceite-de-oliva","title":"","subtitle":""}},"slide_9fbQaa":{"type":"slide","name":"Cerveza","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/cerveza.webp","link":"shopify:\/\/collections\/cervezas","title":"","subtitle":""}},"slide_pcRNm3":{"type":"slide","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Destilados.webp","link":"shopify:\/\/collections\/destilados-licores","title":"","subtitle":""}},"slide_AKzARm":{"type":"slide","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/medalla_real_r_3.webp","link":"shopify:\/\/collections\/destilados-licores","title":"","subtitle":""}}},"block_order":["slide_7iRafW","slide_h43iWJ","slide_HEhrWM","slide_9idB77","slide_zFx49D","slide_XxdTBc","promo_slide_1","slide_3kg9CU","promo_slide_2","promo_slide_3","slide_dTbdTA","slide_PBxn6D","slide_9fbQaa","slide_pcRNm3","slide_AKzARm"],"name":"cateogrias %","settings":{"heading":"Imperdibles Rita","text":"","autoplay_desktop":false,"autoplay_mobile":false,"autoplay_speed":5,"background":"#1e0811","text_color":"#f8f8f8","padding_top":60,"padding_bottom":48}},"santa_rita_best_sellers_YK89FB":{"type":"santa-rita-best-sellers","name":"productos","settings":{"product_card_image_scale":100,"heading":"Más vendidos","text":"Los vinos más elegidos en Santa Rita","products":[],"collection":"vinos-mas-vendidos","max_products":12,"padding_top":64,"padding_bottom":64,"padding_top_mobile":42,"padding_bottom_mobile":48,"autoplay":true,"autoplay_speed":5,"infinite_loop":true,"pack_label":"x12 un.","unit_price_label":"$2.970","liter_price_label":"$3.960","rating_count":"134","excluded_collections":[],"excluded_tags":""}},"santa_rita_awards_slider_MeCk4X":{"type":"santa-rita-awards-slider","blocks":{"slide_QiKUGf":{"type":"slide","name":"Escudo de Casa Real","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/IG_120_1.webp","video_asset_name":"","title":"","subtitle":"","link":"shopify:\/\/collections\/vinos-escudo-de-casa-real"}},"slide_Ece4eN":{"type":"slide","name":"Medalla Real","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/10.webp","video_asset_name":"","title":"","subtitle":"","link":"shopify:\/\/collections\/vinos-medalla-real"}},"slide_rtMEnB":{"type":"slide","name":"Carmen","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/11.webp","video_asset_name":"","title":"","subtitle":"","link":"shopify:\/\/collections\/vinos-carmen"}},"slide_b8AP6y":{"type":"slide","name":"Amaranta","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/17.webp","video_asset_name":"","title":"","subtitle":"","link":"shopify:\/\/collections\/espumantes-amaranta"}},"slide_WNHEqV":{"type":"slide","name":"Floresta","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/IG_120_1_abb3b072-4515-40ab-a41c-d7d02e49b408.webp","video_asset_name":"","title":"","subtitle":"","link":"shopify:\/\/collections\/vinos-floresta"}},"slide_BYpWkc":{"type":"slide","name":"120","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/IG_120_56e185b8-4865-448e-a19f-79e135082965.webp","video_asset_name":"","title":"","subtitle":"","link":"shopify:\/\/collections\/vinos-120"}},"slide_UAxDni":{"type":"slide","name":"Pewen","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/15.webp","video_asset_name":"","title":"","subtitle":"","link":"shopify:\/\/collections\/vinos-pewen"}},"slide_ceJhQ7":{"type":"slide","name":"Triple C","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/16.webp","video_asset_name":"","title":"","subtitle":"","link":"shopify:\/\/collections\/vinos-triple-c"}},"slide_YDqRyq":{"type":"slide","disabled":true,"settings":{"media_type":"video","video":"shopify:\/\/files\/videos\/SR_DIGITAL 02.mp4","video_asset_name":"","title":"Escudo de Casa Real","subtitle":"Chardonnay","link":"shopify:\/\/collections\/vinos-escudo-de-casa-real"}},"slide_UABFmq":{"type":"slide","disabled":true,"settings":{"media_type":"image","image":"shopify:\/\/shop_images\/vinos_premiados_mundialmente_1.png","video_asset_name":"","title":"Casa Real","subtitle":"Cabernet Sauvignon","link":"shopify:\/\/products\/vino-tinto-casa-real-reserva-especial-cabernet-sauvignon"}},"slide_YbWajz":{"type":"slide","disabled":true,"settings":{"media_type":"image","image":"shopify:\/\/shop_images\/vinos_premiados_mundialmente_27c15c39-432e-4a4b-a017-8d8ae648a9e1.png","video_asset_name":"","title":"Triple C","subtitle":"Red Blend","link":"shopify:\/\/products\/vino-tinto-carmen-triple-c-red-blend"}}},"block_order":["slide_QiKUGf","slide_Ece4eN","slide_rtMEnB","slide_b8AP6y","slide_WNHEqV","slide_BYpWkc","slide_UAxDni","slide_ceJhQ7","slide_YDqRyq","slide_UABFmq","slide_YbWajz"],"disabled":true,"name":"marcas","settings":{"autoplay_desktop":false,"autoplay_mobile":false,"show_stars":false,"heading":"Tu marca favorita está aquí","text":"Encuentra tus marcas favoritas y descubre todo lo que tenemos para ti.","button_label":"Comprar Ahora","button_link":"","button_background":"#ffffff","button_text_color":"#1e0812","enable_lightbox":true,"lightbox_link_label":"Comprar ahora","card_width":250,"background":"#1e0812","text_color":"#ffffff"}},"santa_rita_awards_slider":{"type":"santa-rita-awards-slider","blocks":{"award_image_1":{"type":"slide","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/Mesa_de_trabajo_1.png","video_asset_name":"","title":"Santa Rita","subtitle":"Forbes","link":""}},"award_video_1":{"type":"slide","settings":{"media_type":"video","video":"shopify:\/\/files\/videos\/WhatsApp Video 2026-10-20 at 4.32.51 PM.mp4","video_asset_name":"","title":"Floresta","subtitle":"","link":"shopify:\/\/collections\/vinos-floresta"}},"slide_iDb8mk":{"type":"slide","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/vinos_premiados_mundialmente_2.png","video_asset_name":"","title":"Pewen de Apalta","subtitle":"Carmenere","link":"shopify:\/\/products\/vino-tinto-pewen-de-apalta-carmenere"}},"slide_HwjmB8":{"type":"slide","disabled":true,"settings":{"media_type":"video","video":"shopify:\/\/files\/videos\/SR_DIGITAL 02.mp4","video_asset_name":"","title":"Escudo de Casa Real","subtitle":"Chardonnay","link":"shopify:\/\/collections\/vinos-escudo-de-casa-real"}},"award_image_2":{"type":"slide","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/vinos_premiados_mundialmente_1.png","video_asset_name":"","title":"Casa Real","subtitle":"Cabernet Sauvignon","link":"shopify:\/\/products\/vino-tinto-casa-real-reserva-especial-cabernet-sauvignon"}},"slide_dzCVJE":{"type":"slide","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/vinos_premiados_mundialmente_27c15c39-432e-4a4b-a017-8d8ae648a9e1.png","video_asset_name":"","title":"Triple C","subtitle":"Red Blend","link":"shopify:\/\/products\/vino-tinto-carmen-triple-c-red-blend"}}},"block_order":["award_image_1","award_video_1","slide_iDb8mk","slide_HwjmB8","award_image_2","slide_dzCVJE"],"disabled":true,"settings":{"autoplay_desktop":false,"autoplay_mobile":false,"show_stars":false,"heading":"","text":"Reconocidos por los más grandes críticos del mundo. DESCUBRE NUESTROS GRANDES VINOS","button_label":"","button_link":"","button_background":"#ffffff","button_text_color":"#1e0812","enable_lightbox":false,"lightbox_link_label":"Ver más","card_width":250,"background":"#1e0812","text_color":"#ffffff"}},"santa_rita_best_sellers_DVUeHy":{"type":"santa-rita-best-sellers","disabled":true,"settings":{"product_card_image_scale":100,"heading":"Vinos Ultra Premium","text":"Descubre etiquetas que reflejan excelencia, carácter y distinción.","products":[],"collection":"alta-gama","max_products":12,"padding_top":64,"padding_bottom":64,"padding_top_mobile":42,"padding_bottom_mobile":48,"autoplay":true,"autoplay_speed":5,"infinite_loop":true,"pack_label":"x12 un.","unit_price_label":"$2.970","liter_price_label":"$3.960","rating_count":"134","excluded_collections":[],"excluded_tags":""}},"santa_rita_awards_slider_8mHN6K":{"type":"santa-rita-awards-slider","blocks":{"slide_LbqpDE":{"type":"slide","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/Mesa_de_trabajo_1.png","video_asset_name":"","title":"Santa Rita","subtitle":"Forbes","link":""}},"slide_f7R8bY":{"type":"slide","settings":{"media_type":"video","video":"shopify:\/\/files\/videos\/WhatsApp Video 2026-10-20 at 4.32.51 PM.mp4","video_asset_name":"","title":"Floresta","subtitle":"","link":"shopify:\/\/collections\/vinos-floresta"}},"slide_iL7dU3":{"type":"slide","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/vinos_premiados_mundialmente_2.png","video_asset_name":"","title":"Pewen de Apalta","subtitle":"Carmenere","link":"shopify:\/\/products\/vino-tinto-pewen-de-apalta-carmenere"}},"slide_NpKcMm":{"type":"slide","disabled":true,"settings":{"media_type":"video","video":"shopify:\/\/files\/videos\/SR_DIGITAL 02.mp4","video_asset_name":"","title":"Escudo de Casa Real","subtitle":"Chardonnay","link":"shopify:\/\/collections\/vinos-escudo-de-casa-real"}},"slide_XheGrC":{"type":"slide","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/vinos_premiados_mundialmente_1.png","video_asset_name":"","title":"Casa Real","subtitle":"Cabernet Sauvignon","link":"shopify:\/\/products\/vino-tinto-casa-real-reserva-especial-cabernet-sauvignon"}},"slide_bDHXFQ":{"type":"slide","settings":{"media_type":"image","image":"shopify:\/\/shop_images\/vinos_premiados_mundialmente_27c15c39-432e-4a4b-a017-8d8ae648a9e1.png","video_asset_name":"","title":"Triple C","subtitle":"Red Blend","link":"shopify:\/\/products\/vino-tinto-carmen-triple-c-red-blend"}}},"block_order":["slide_LbqpDE","slide_f7R8bY","slide_iL7dU3","slide_NpKcMm","slide_XheGrC","slide_bDHXFQ"],"settings":{"autoplay_desktop":false,"autoplay_mobile":false,"show_stars":false,"heading":"Vinos extraordinarios","text":"Reconocidos por los más grandes críticos del mundo.","button_label":"DESCUBRE: ALTA GAMA","button_link":"shopify:\/\/collections\/alta-gama","button_background":"#ffffff","button_text_color":"#1e0812","enable_lightbox":true,"lightbox_link_label":"Ver más","card_width":250,"background":"#1e0812","text_color":"#ffffff"}},"179450795757a06cd7":{"type":"_blocks","blocks":{"gsc_instagram_feed_instafeed_GDEGGB":{"type":"shopify:\/\/apps\/gsc-instagram-feed\/blocks\/instafeed\/96970b1b-b770-454f-b16b-51f47e1aa4ed","settings":{"widget_id":"GSC-mlCCqmqPWocnImj"}}},"block_order":["gsc_instagram_feed_instafeed_GDEGGB"],"custom_css":[".section-background,.section {background-color: #fbf8f1;}",".gfa-widget {background-color: transparent;}"],"settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"section_width":"page-width","section_height":"","section_height_custom":50,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0}},"santa_rita_blog_slider":{"type":"santa-rita-blog-slider","settings":{"heading":"Historias para descubrir","text":"Conoce el blog de Santa Rita Online.","blog":"blog","article_limit":10,"excerpt_length":50,"button_label":"Ver más"}}},"order":["santa_rita_banner_slider","santa_rita_best_sellers","santa_rita_best_sellers_nR6Laz","santa_rita_awards_slider_dPzpD7","santa_rita_best_sellers_4gPU99","santa_rita_promo_slider_bDxef6","santa_rita_best_sellers_YK89FB","santa_rita_awards_slider_MeCk4X","santa_rita_awards_slider","santa_rita_best_sellers_DVUeHy","santa_rita_awards_slider_8mHN6K","179450795757a06cd7","santa_rita_blog_slider"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "santa_rita_banner_slider": {
+      "type": "santa-rita-banner-slider",
+      "blocks": {
+        "slide_intro": {
+          "type": "slide",
+          "name": "test black",
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/Video Back Home desktop.mp4",
+            "video_mobile": "shopify://files/videos/Video Back Home mobile.mp4",
+            "video_asset_name": "",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://collections/all",
+            "banner_link": "shopify://collections/ofertas",
+            "banner_link_label": "Ver más"
+          }
+        },
+        "slide_C9bfHe": {
+          "type": "slide",
+          "name": "120 Latas",
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/120 latas video banner shopify ult (1).mp4",
+            "video_mobile": "shopify://files/videos/800X800 Video Latas_7927cd98-65ab-48fd-8079-75ee4e2682c6.mp4",
+            "video_asset_name": "",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "banner_link": "shopify://collections/ready-to-drink",
+            "banner_link_label": "Ver más"
+          }
+        },
+        "slide_rrczQR": {
+          "type": "slide",
+          "name": "Martes de saldos",
+          "disabled": true,
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/BANNERS_DESKTOP_MARTES_16.png",
+            "image_mobile": "shopify://shop_images/BANNER_MOBILE_MARTES_16.png",
+            "video_asset_name": "",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "banner_link": "shopify://collections/saldos-de-exportacion",
+            "banner_link_label": "Ver más"
+          }
+        },
+        "slide_rkeWwR": {
+          "type": "slide",
+          "name": "Medalla Real",
+          "disabled": true,
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Medalla_Real_Reserva.webp",
+            "image_mobile": "shopify://shop_images/Medalla_Real_Reserva_803171f1-0fdd-4f49-b53c-94e0ef749c70.webp",
+            "video_asset_name": "",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "banner_link": "shopify://collections/vinos-medalla-real",
+            "banner_link_label": "Ver más"
+          }
+        },
+        "slide_FKmYi9": {
+          "type": "slide",
+          "name": "Amaranta",
+          "disabled": true,
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Espumante_Amaranta.webp",
+            "image_mobile": "shopify://shop_images/Espumante_Amaranta_76c89438-c481-4733-b3a7-e669a5d5e691.webp",
+            "video_asset_name": "",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "banner_link": "shopify://collections/ganadores-sro",
+            "banner_link_label": "Ver más"
+          }
+        },
+        "slide_JzbzGd": {
+          "type": "slide",
+          "name": "forbes",
+          "disabled": true,
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/1920x620.mp4",
+            "video_mobile": "shopify://files/videos/800x800.mp4",
+            "video_asset_name": "",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "banner_link": "shopify://collections/ganadores-sro",
+            "banner_link_label": "Ver más"
+          }
+        },
+        "slide_CTczBP": {
+          "type": "slide",
+          "name": "Escudo CR",
+          "disabled": true,
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Escudo_de_Casa_Real_1.webp",
+            "image_mobile": "shopify://shop_images/Escudo_de_Casa_Real_2.webp",
+            "video_asset_name": "",
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "banner_link": "shopify://collections/vinos-escudo-de-casa-real",
+            "banner_link_label": "Ver más"
+          }
+        }
+      },
+      "block_order": [
+        "slide_intro",
+        "slide_C9bfHe",
+        "slide_rrczQR",
+        "slide_rkeWwR",
+        "slide_FKmYi9",
+        "slide_JzbzGd",
+        "slide_CTczBP"
+      ],
+      "settings": {
+        "height_mode": "custom",
+        "ratio_width": 1920,
+        "ratio_height": 620,
+        "ratio_mobile_width": 800,
+        "ratio_mobile_height": 800,
+        "max_height_vh": 100,
+        "height_desktop": 160,
+        "height_mobile": 460,
+        "navigation": "both",
+        "dots_position": "right",
+        "autoplay": true,
+        "autoplay_speed": 12,
+        "content_position": "left",
+        "content_max_width": 640,
+        "overlay_opacity": 5,
+        "text_color": "#ffffff",
+        "button_background": "#9b173f",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "santa_rita_best_sellers": {
+      "type": "santa-rita-best-sellers",
+      "name": "Black week productos",
+      "settings": {
+        "product_card_image_scale": 100,
+        "heading": "Ofertas Black Friday",
+        "text": "Es el momento perfecto para llevar tus favoritos a precios especiales.",
+        "products": [],
+        "collection": "ganadores-sro",
+        "max_products": 12,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "padding_top_mobile": 42,
+        "padding_bottom_mobile": 48,
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "infinite_loop": true,
+        "pack_label": "x12 un.",
+        "unit_price_label": "$2.970",
+        "liter_price_label": "$3.960",
+        "rating_count": "134",
+        "excluded_collections": [],
+        "excluded_tags": ""
+      }
+    },
+    "santa_rita_best_sellers_nR6Laz": {
+      "type": "santa-rita-best-sellers",
+      "name": "Nuevos Lanzamientos",
+      "settings": {
+        "product_card_image_scale": 100,
+        "heading": "Nuevos lanzamientos",
+        "text": "Explora los últimos ingresos.",
+        "products": [
+          "coctel-120-spritz-aperitivo-rosato-lata-350cc",
+          "coctel-120-spritz-blanco-tropical-lata-350cc",
+          "coctel-120-spritz-tinto-de-verano-lata-350cc",
+          "coctel-120-3-medallas-caramel-macchiato",
+          "coctel-120-3-medallas-chocolate-naranja",
+          "escudo-de-casa-real-chardonnay",
+          "escudo-de-casa-real-sauvignon-blanc",
+          "espumante-carmen-frida-kahlo-zero",
+          "vino-blanco-carmen-frida-kahlo-zero-x6",
+          "vino-tinto-carmen-frida-kahlo-zero-x6"
+        ],
+        "collection": "all",
+        "max_products": 8,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 48,
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "infinite_loop": true,
+        "pack_label": "x12 un.",
+        "unit_price_label": "$2.970",
+        "liter_price_label": "$3.960",
+        "rating_count": "134",
+        "excluded_collections": [],
+        "excluded_tags": ""
+      }
+    },
+    "santa_rita_awards_slider_dPzpD7": {
+      "type": "santa-rita-awards-slider",
+      "blocks": {
+        "slide_RtRQtm": {
+          "type": "slide",
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/test1_fd4b3805-48ef-4064-93ed-c906d305063a.mp4",
+            "video_asset_name": "",
+            "title": "",
+            "subtitle": "",
+            "link": "shopify://collections/ready-to-drink"
+          }
+        },
+        "slide_DrRdit": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/120_Spritz_Latas.png",
+            "video_asset_name": "",
+            "title": "",
+            "subtitle": "",
+            "link": "shopify://collections/ready-to-drink"
+          }
+        },
+        "slide_JV3HVJ": {
+          "type": "slide",
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/2 (1).mp4",
+            "video_asset_name": "",
+            "title": "",
+            "subtitle": "",
+            "link": "shopify://collections/ready-to-drink"
+          }
+        },
+        "slide_9tWBQY": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/120_Latas_Spritz_1.webp",
+            "video_asset_name": "",
+            "title": "",
+            "subtitle": "",
+            "link": "shopify://collections/ready-to-drink"
+          }
+        },
+        "slide_Tajw4Y": {
+          "type": "slide",
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/120 Latas Spritz.mp4",
+            "video_asset_name": "",
+            "title": "",
+            "subtitle": "",
+            "link": "shopify://collections/ready-to-drink"
+          }
+        },
+        "slide_Gz9Eyw": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/120_Aperitivo_Rosato.webp",
+            "video_asset_name": "",
+            "title": "",
+            "subtitle": "",
+            "link": "shopify://collections/ready-to-drink"
+          }
+        },
+        "slide_waPgL4": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/120_Tinot_de_Verano.webp",
+            "video_asset_name": "",
+            "title": "",
+            "subtitle": "",
+            "link": "shopify://collections/ready-to-drink"
+          }
+        },
+        "slide_aAcw7m": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/120_Blanco_Tropical.webp",
+            "video_asset_name": "",
+            "title": "",
+            "subtitle": "",
+            "link": "shopify://collections/ready-to-drink"
+          }
+        },
+        "slide_NCxhnx": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/SR_DIGITAL 02.mp4",
+            "video_asset_name": "",
+            "title": "Escudo de Casa Real",
+            "subtitle": "Chardonnay",
+            "link": "shopify://collections/vinos-escudo-de-casa-real"
+          }
+        },
+        "slide_AdpFiK": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/vinos_premiados_mundialmente_1.png",
+            "video_asset_name": "",
+            "title": "Casa Real",
+            "subtitle": "Cabernet Sauvignon",
+            "link": "shopify://products/vino-tinto-casa-real-reserva-especial-cabernet-sauvignon"
+          }
+        },
+        "slide_tr4zW8": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/vinos_premiados_mundialmente_27c15c39-432e-4a4b-a017-8d8ae648a9e1.png",
+            "video_asset_name": "",
+            "title": "Triple C",
+            "subtitle": "Red Blend",
+            "link": "shopify://products/vino-tinto-carmen-triple-c-red-blend"
+          }
+        }
+      },
+      "block_order": [
+        "slide_RtRQtm",
+        "slide_DrRdit",
+        "slide_JV3HVJ",
+        "slide_9tWBQY",
+        "slide_Tajw4Y",
+        "slide_Gz9Eyw",
+        "slide_waPgL4",
+        "slide_aAcw7m",
+        "slide_NCxhnx",
+        "slide_AdpFiK",
+        "slide_tr4zW8"
+      ],
+      "name": "120 Latas slider",
+      "settings": {
+        "autoplay_desktop": false,
+        "autoplay_mobile": false,
+        "show_stars": false,
+        "heading": "Nuevo 120 Spritz",
+        "text": "Tres variedades, refrescantes, prácticas y listas para disfrutar en cualquier ocasión. ¡Encuentra tu favorita y disfruta lo nuevo!",
+        "button_label": "Comprar Ahora",
+        "button_link": "shopify://collections/ready-to-drink",
+        "button_background": "#ffffff",
+        "button_text_color": "#1e0812",
+        "enable_lightbox": true,
+        "lightbox_link_label": "Comprar ahora",
+        "card_width": 250,
+        "background": "#1e0812",
+        "text_color": "#ffffff"
+      }
+    },
+    "santa_rita_best_sellers_4gPU99": {
+      "type": "santa-rita-best-sellers",
+      "name": "productos",
+      "settings": {
+        "product_card_image_scale": 100,
+        "heading": "Santa Rita Days",
+        "text": "Descubre una selección de vinos llenos de carácter.",
+        "products": [],
+        "collection": "ganadores-sro",
+        "max_products": 12,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "padding_top_mobile": 42,
+        "padding_bottom_mobile": 48,
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "infinite_loop": true,
+        "pack_label": "x12 un.",
+        "unit_price_label": "$2.970",
+        "liter_price_label": "$3.960",
+        "rating_count": "134",
+        "excluded_collections": [],
+        "excluded_tags": ""
+      }
+    },
+    "santa_rita_promo_slider_bDxef6": {
+      "type": "santa-rita-promo-slider",
+      "blocks": {
+        "slide_7iRafW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/escudo_de_casa_real_8a9d1312-d8f3-4df8-8811-d14683a6c3af.webp",
+            "link": "shopify://collections/vinos-escudo-de-casa-real",
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "slide_h43iWJ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/medalla_real_r_2.webp",
+            "link": "shopify://collections/ready-to-drink",
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "slide_HEhrWM": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/medalla_real_r_fd15575c-26fb-4e36-af8e-7903e110d411.png",
+            "link": "shopify://collections/vinos-medalla-real",
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "slide_9idB77": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/amaranta_83d9f498-4e40-47d0-979d-346f7b631754.png",
+            "link": "shopify://collections/espumantes",
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "slide_zFx49D": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/medalla_real_r_3.webp",
+            "link": "shopify://collections/destilados-licores",
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "slide_XxdTBc": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/banner_cateogrias_shopify.png",
+            "link": "shopify://collections/cervezas",
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "promo_slide_1": {
+          "type": "slide",
+          "name": "Escudo de casa real",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Escudo_de_casa_real_0e724e98-64c9-46e3-860d-7dd3203d84d8.webp",
+            "link": "shopify://collections/vinos-escudo-de-casa-real",
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "slide_3kg9CU": {
+          "type": "slide",
+          "name": "Medalla real",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/medalla_real_reserva_15818480-2460-4aed-92a2-8ef6a0520bda.webp",
+            "link": "shopify://collections/vinos-medalla-real",
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "promo_slide_2": {
+          "type": "slide",
+          "name": "Espumantes",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/amaranta_949032bf-a578-49f8-985c-1b8182a36578.webp",
+            "link": "shopify://collections/espumantes",
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "promo_slide_3": {
+          "type": "slide",
+          "name": "Carmen GR",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/carmen_gran_reserva.webp",
+            "link": "shopify://collections/vinos-carmen-gran-reserva",
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "slide_dTbdTA": {
+          "type": "slide",
+          "name": "Latas",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/amaranta_lata_real_r.webp",
+            "link": "shopify://collections/ready-to-drink",
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "slide_PBxn6D": {
+          "type": "slide",
+          "name": "Aceite de oliva",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/aceite_de_oliva.webp",
+            "link": "shopify://collections/aceite-de-oliva",
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "slide_9fbQaa": {
+          "type": "slide",
+          "name": "Cerveza",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/cerveza.webp",
+            "link": "shopify://collections/cervezas",
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "slide_pcRNm3": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Destilados.webp",
+            "link": "shopify://collections/destilados-licores",
+            "title": "",
+            "subtitle": ""
+          }
+        },
+        "slide_AKzARm": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/medalla_real_r_3.webp",
+            "link": "shopify://collections/destilados-licores",
+            "title": "",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_7iRafW",
+        "slide_h43iWJ",
+        "slide_HEhrWM",
+        "slide_9idB77",
+        "slide_zFx49D",
+        "slide_XxdTBc",
+        "promo_slide_1",
+        "slide_3kg9CU",
+        "promo_slide_2",
+        "promo_slide_3",
+        "slide_dTbdTA",
+        "slide_PBxn6D",
+        "slide_9fbQaa",
+        "slide_pcRNm3",
+        "slide_AKzARm"
+      ],
+      "name": "cateogrias %",
+      "settings": {
+        "heading": "Imperdibles Rita",
+        "text": "",
+        "autoplay_desktop": false,
+        "autoplay_mobile": false,
+        "autoplay_speed": 5,
+        "background": "#1e0811",
+        "text_color": "#f8f8f8",
+        "padding_top": 60,
+        "padding_bottom": 48
+      }
+    },
+    "santa_rita_best_sellers_YK89FB": {
+      "type": "santa-rita-best-sellers",
+      "name": "productos",
+      "settings": {
+        "product_card_image_scale": 100,
+        "heading": "Más vendidos",
+        "text": "Los vinos más elegidos en Santa Rita",
+        "products": [],
+        "collection": "vinos-mas-vendidos",
+        "max_products": 12,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "padding_top_mobile": 42,
+        "padding_bottom_mobile": 48,
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "infinite_loop": true,
+        "pack_label": "x12 un.",
+        "unit_price_label": "$2.970",
+        "liter_price_label": "$3.960",
+        "rating_count": "134",
+        "excluded_collections": [],
+        "excluded_tags": ""
+      }
+    },
+    "santa_rita_awards_slider_MeCk4X": {
+      "type": "santa-rita-awards-slider",
+      "blocks": {
+        "slide_QiKUGf": {
+          "type": "slide",
+          "name": "Escudo de Casa Real",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/IG_120_1.webp",
+            "video_asset_name": "",
+            "title": "",
+            "subtitle": "",
+            "link": "shopify://collections/vinos-escudo-de-casa-real"
+          }
+        },
+        "slide_Ece4eN": {
+          "type": "slide",
+          "name": "Medalla Real",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/10.webp",
+            "video_asset_name": "",
+            "title": "",
+            "subtitle": "",
+            "link": "shopify://collections/vinos-medalla-real"
+          }
+        },
+        "slide_rtMEnB": {
+          "type": "slide",
+          "name": "Carmen",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/11.webp",
+            "video_asset_name": "",
+            "title": "",
+            "subtitle": "",
+            "link": "shopify://collections/vinos-carmen"
+          }
+        },
+        "slide_b8AP6y": {
+          "type": "slide",
+          "name": "Amaranta",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/17.webp",
+            "video_asset_name": "",
+            "title": "",
+            "subtitle": "",
+            "link": "shopify://collections/espumantes-amaranta"
+          }
+        },
+        "slide_WNHEqV": {
+          "type": "slide",
+          "name": "Floresta",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/IG_120_1_abb3b072-4515-40ab-a41c-d7d02e49b408.webp",
+            "video_asset_name": "",
+            "title": "",
+            "subtitle": "",
+            "link": "shopify://collections/vinos-floresta"
+          }
+        },
+        "slide_BYpWkc": {
+          "type": "slide",
+          "name": "120",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/IG_120_56e185b8-4865-448e-a19f-79e135082965.webp",
+            "video_asset_name": "",
+            "title": "",
+            "subtitle": "",
+            "link": "shopify://collections/vinos-120"
+          }
+        },
+        "slide_UAxDni": {
+          "type": "slide",
+          "name": "Pewen",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/15.webp",
+            "video_asset_name": "",
+            "title": "",
+            "subtitle": "",
+            "link": "shopify://collections/vinos-pewen"
+          }
+        },
+        "slide_ceJhQ7": {
+          "type": "slide",
+          "name": "Triple C",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/16.webp",
+            "video_asset_name": "",
+            "title": "",
+            "subtitle": "",
+            "link": "shopify://collections/vinos-triple-c"
+          }
+        },
+        "slide_YDqRyq": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/SR_DIGITAL 02.mp4",
+            "video_asset_name": "",
+            "title": "Escudo de Casa Real",
+            "subtitle": "Chardonnay",
+            "link": "shopify://collections/vinos-escudo-de-casa-real"
+          }
+        },
+        "slide_UABFmq": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/vinos_premiados_mundialmente_1.png",
+            "video_asset_name": "",
+            "title": "Casa Real",
+            "subtitle": "Cabernet Sauvignon",
+            "link": "shopify://products/vino-tinto-casa-real-reserva-especial-cabernet-sauvignon"
+          }
+        },
+        "slide_YbWajz": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/vinos_premiados_mundialmente_27c15c39-432e-4a4b-a017-8d8ae648a9e1.png",
+            "video_asset_name": "",
+            "title": "Triple C",
+            "subtitle": "Red Blend",
+            "link": "shopify://products/vino-tinto-carmen-triple-c-red-blend"
+          }
+        }
+      },
+      "block_order": [
+        "slide_QiKUGf",
+        "slide_Ece4eN",
+        "slide_rtMEnB",
+        "slide_b8AP6y",
+        "slide_WNHEqV",
+        "slide_BYpWkc",
+        "slide_UAxDni",
+        "slide_ceJhQ7",
+        "slide_YDqRyq",
+        "slide_UABFmq",
+        "slide_YbWajz"
+      ],
+      "disabled": true,
+      "name": "marcas",
+      "settings": {
+        "autoplay_desktop": false,
+        "autoplay_mobile": false,
+        "show_stars": false,
+        "heading": "Tu marca favorita está aquí",
+        "text": "Encuentra tus marcas favoritas y descubre todo lo que tenemos para ti.",
+        "button_label": "Comprar Ahora",
+        "button_link": "",
+        "button_background": "#ffffff",
+        "button_text_color": "#1e0812",
+        "enable_lightbox": true,
+        "lightbox_link_label": "Comprar ahora",
+        "card_width": 250,
+        "background": "#1e0812",
+        "text_color": "#ffffff"
+      }
+    },
+    "santa_rita_awards_slider": {
+      "type": "santa-rita-awards-slider",
+      "blocks": {
+        "award_image_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Mesa_de_trabajo_1.png",
+            "video_asset_name": "",
+            "title": "Santa Rita",
+            "subtitle": "Forbes",
+            "link": ""
+          }
+        },
+        "award_video_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/WhatsApp Video 2026-10-20 at 4.32.51 PM.mp4",
+            "video_asset_name": "",
+            "title": "Floresta",
+            "subtitle": "",
+            "link": "shopify://collections/vinos-floresta"
+          }
+        },
+        "slide_iDb8mk": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/vinos_premiados_mundialmente_2.png",
+            "video_asset_name": "",
+            "title": "Pewen de Apalta",
+            "subtitle": "Carmenere",
+            "link": "shopify://products/vino-tinto-pewen-de-apalta-carmenere"
+          }
+        },
+        "slide_HwjmB8": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/SR_DIGITAL 02.mp4",
+            "video_asset_name": "",
+            "title": "Escudo de Casa Real",
+            "subtitle": "Chardonnay",
+            "link": "shopify://collections/vinos-escudo-de-casa-real"
+          }
+        },
+        "award_image_2": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/vinos_premiados_mundialmente_1.png",
+            "video_asset_name": "",
+            "title": "Casa Real",
+            "subtitle": "Cabernet Sauvignon",
+            "link": "shopify://products/vino-tinto-casa-real-reserva-especial-cabernet-sauvignon"
+          }
+        },
+        "slide_dzCVJE": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/vinos_premiados_mundialmente_27c15c39-432e-4a4b-a017-8d8ae648a9e1.png",
+            "video_asset_name": "",
+            "title": "Triple C",
+            "subtitle": "Red Blend",
+            "link": "shopify://products/vino-tinto-carmen-triple-c-red-blend"
+          }
+        }
+      },
+      "block_order": [
+        "award_image_1",
+        "award_video_1",
+        "slide_iDb8mk",
+        "slide_HwjmB8",
+        "award_image_2",
+        "slide_dzCVJE"
+      ],
+      "disabled": true,
+      "settings": {
+        "autoplay_desktop": false,
+        "autoplay_mobile": false,
+        "show_stars": false,
+        "heading": "",
+        "text": "Reconocidos por los más grandes críticos del mundo. DESCUBRE NUESTROS GRANDES VINOS",
+        "button_label": "",
+        "button_link": "",
+        "button_background": "#ffffff",
+        "button_text_color": "#1e0812",
+        "enable_lightbox": false,
+        "lightbox_link_label": "Ver más",
+        "card_width": 250,
+        "background": "#1e0812",
+        "text_color": "#ffffff"
+      }
+    },
+    "santa_rita_best_sellers_DVUeHy": {
+      "type": "santa-rita-best-sellers",
+      "disabled": true,
+      "settings": {
+        "product_card_image_scale": 100,
+        "heading": "Vinos Ultra Premium",
+        "text": "Descubre etiquetas que reflejan excelencia, carácter y distinción.",
+        "products": [],
+        "collection": "alta-gama",
+        "max_products": 12,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "padding_top_mobile": 42,
+        "padding_bottom_mobile": 48,
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "infinite_loop": true,
+        "pack_label": "x12 un.",
+        "unit_price_label": "$2.970",
+        "liter_price_label": "$3.960",
+        "rating_count": "134",
+        "excluded_collections": [],
+        "excluded_tags": ""
+      }
+    },
+    "santa_rita_awards_slider_8mHN6K": {
+      "type": "santa-rita-awards-slider",
+      "blocks": {
+        "slide_LbqpDE": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Mesa_de_trabajo_1.png",
+            "video_asset_name": "",
+            "title": "Santa Rita",
+            "subtitle": "Forbes",
+            "link": ""
+          }
+        },
+        "slide_f7R8bY": {
+          "type": "slide",
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/WhatsApp Video 2026-10-20 at 4.32.51 PM.mp4",
+            "video_asset_name": "",
+            "title": "Floresta",
+            "subtitle": "",
+            "link": "shopify://collections/vinos-floresta"
+          }
+        },
+        "slide_iL7dU3": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/vinos_premiados_mundialmente_2.png",
+            "video_asset_name": "",
+            "title": "Pewen de Apalta",
+            "subtitle": "Carmenere",
+            "link": "shopify://products/vino-tinto-pewen-de-apalta-carmenere"
+          }
+        },
+        "slide_NpKcMm": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/SR_DIGITAL 02.mp4",
+            "video_asset_name": "",
+            "title": "Escudo de Casa Real",
+            "subtitle": "Chardonnay",
+            "link": "shopify://collections/vinos-escudo-de-casa-real"
+          }
+        },
+        "slide_XheGrC": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/vinos_premiados_mundialmente_1.png",
+            "video_asset_name": "",
+            "title": "Casa Real",
+            "subtitle": "Cabernet Sauvignon",
+            "link": "shopify://products/vino-tinto-casa-real-reserva-especial-cabernet-sauvignon"
+          }
+        },
+        "slide_bDHXFQ": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/vinos_premiados_mundialmente_27c15c39-432e-4a4b-a017-8d8ae648a9e1.png",
+            "video_asset_name": "",
+            "title": "Triple C",
+            "subtitle": "Red Blend",
+            "link": "shopify://products/vino-tinto-carmen-triple-c-red-blend"
+          }
+        }
+      },
+      "block_order": [
+        "slide_LbqpDE",
+        "slide_f7R8bY",
+        "slide_iL7dU3",
+        "slide_NpKcMm",
+        "slide_XheGrC",
+        "slide_bDHXFQ"
+      ],
+      "settings": {
+        "autoplay_desktop": false,
+        "autoplay_mobile": false,
+        "show_stars": false,
+        "heading": "Vinos extraordinarios",
+        "text": "Reconocidos por los más grandes críticos del mundo.",
+        "button_label": "DESCUBRE: ALTA GAMA",
+        "button_link": "shopify://collections/alta-gama",
+        "button_background": "#ffffff",
+        "button_text_color": "#1e0812",
+        "enable_lightbox": true,
+        "lightbox_link_label": "Ver más",
+        "card_width": 250,
+        "background": "#1e0812",
+        "text_color": "#ffffff"
+      }
+    },
+    "179450795757a06cd7": {
+      "type": "_blocks",
+      "blocks": {
+        "gsc_instagram_feed_instafeed_GDEGGB": {
+          "type": "shopify://apps/gsc-instagram-feed/blocks/instafeed/96970b1b-b770-454f-b16b-51f47e1aa4ed",
+          "settings": {
+            "widget_id": "GSC-mlCCqmqPWocnImj"
+          }
+        }
+      },
+      "block_order": [
+        "gsc_instagram_feed_instafeed_GDEGGB"
+      ],
+      "custom_css": [
+        ".section-background,.section {background-color: #fbf8f1;}",
+        ".gfa-widget {background-color: transparent;}"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "santa_rita_blog_slider": {
+      "type": "santa-rita-blog-slider",
+      "settings": {
+        "heading": "Historias para descubrir",
+        "text": "Conoce el blog de Santa Rita Online.",
+        "blog": "blog",
+        "article_limit": 10,
+        "excerpt_length": 50,
+        "button_label": "Ver más"
+      }
+    }
+  },
+  "order": [
+    "santa_rita_banner_slider",
+    "santa_rita_best_sellers",
+    "santa_rita_best_sellers_nR6Laz",
+    "santa_rita_awards_slider_dPzpD7",
+    "santa_rita_best_sellers_4gPU99",
+    "santa_rita_promo_slider_bDxef6",
+    "santa_rita_best_sellers_YK89FB",
+    "santa_rita_awards_slider_MeCk4X",
+    "santa_rita_awards_slider",
+    "santa_rita_best_sellers_DVUeHy",
+    "santa_rita_awards_slider_8mHN6K",
+    "179450795757a06cd7",
+    "santa_rita_blog_slider"
+  ]
+}
