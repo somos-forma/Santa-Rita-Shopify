@@ -17,7 +17,7 @@
           "name": "test black",
           "settings": {
             "media_type": "video",
-            "video": "shopify://files/videos/Video Back Home desktop.mp4",
+            "video": "shopify://files/videos/Video Back Home desktop (1).mp4",
             "video_mobile": "shopify://files/videos/Video Back Home mobile.mp4",
             "video_asset_name": "",
             "heading": "",
@@ -183,6 +183,102 @@
         "rating_count": "134",
         "excluded_collections": [],
         "excluded_tags": ""
+      }
+    },
+    "santa_rita_awards_slider_VhkKe9": {
+      "type": "santa-rita-awards-slider",
+      "blocks": {
+        "slide_Lc8tGk": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Mesa_de_trabajo_1.png",
+            "video_asset_name": "",
+            "title": "Santa Rita",
+            "subtitle": "Forbes",
+            "link": ""
+          }
+        },
+        "slide_aTYEyK": {
+          "type": "slide",
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/WhatsApp Video 2026-10-20 at 4.32.51 PM.mp4",
+            "video_asset_name": "",
+            "title": "Floresta",
+            "subtitle": "",
+            "link": "shopify://collections/vinos-floresta"
+          }
+        },
+        "slide_MtWpfe": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/vinos_premiados_mundialmente_2.png",
+            "video_asset_name": "",
+            "title": "Pewen de Apalta",
+            "subtitle": "Carmenere",
+            "link": "shopify://products/vino-tinto-pewen-de-apalta-carmenere"
+          }
+        },
+        "slide_44PywN": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/SR_DIGITAL 02.mp4",
+            "video_asset_name": "",
+            "title": "Escudo de Casa Real",
+            "subtitle": "Chardonnay",
+            "link": "shopify://collections/vinos-escudo-de-casa-real"
+          }
+        },
+        "slide_dHgQQp": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/vinos_premiados_mundialmente_1.png",
+            "video_asset_name": "",
+            "title": "Casa Real",
+            "subtitle": "Cabernet Sauvignon",
+            "link": "shopify://products/vino-tinto-casa-real-reserva-especial-cabernet-sauvignon"
+          }
+        },
+        "slide_kRfXnQ": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/vinos_premiados_mundialmente_27c15c39-432e-4a4b-a017-8d8ae648a9e1.png",
+            "video_asset_name": "",
+            "title": "Triple C",
+            "subtitle": "Red Blend",
+            "link": "shopify://products/vino-tinto-carmen-triple-c-red-blend"
+          }
+        }
+      },
+      "block_order": [
+        "slide_Lc8tGk",
+        "slide_aTYEyK",
+        "slide_MtWpfe",
+        "slide_44PywN",
+        "slide_dHgQQp",
+        "slide_kRfXnQ"
+      ],
+      "settings": {
+        "autoplay_desktop": false,
+        "autoplay_mobile": false,
+        "show_stars": false,
+        "heading": "Categorías favoritas",
+        "text": "Explora tus categorías favoritas y descubre una gran variedad de marcas y productos para cada ocasión.",
+        "button_label": "",
+        "button_link": "",
+        "button_background": "#ffffff",
+        "button_text_color": "#1e0812",
+        "enable_lightbox": false,
+        "lightbox_link_label": "Ver más",
+        "card_width": 250,
+        "background": "#1e0812",
+        "text_color": "#ffffff"
       }
     },
     "santa_rita_best_sellers_nR6Laz": {
@@ -382,6 +478,7 @@
     },
     "santa_rita_best_sellers_4gPU99": {
       "type": "santa-rita-best-sellers",
+      "disabled": true,
       "name": "productos",
       "settings": {
         "product_card_image_scale": 100,
@@ -577,6 +674,7 @@
         "slide_pcRNm3",
         "slide_AKzARm"
       ],
+      "disabled": true,
       "name": "cateogrias %",
       "settings": {
         "heading": "Imperdibles Rita",
@@ -1074,6 +1172,7 @@
   "order": [
     "santa_rita_banner_slider",
     "santa_rita_best_sellers",
+    "santa_rita_awards_slider_VhkKe9",
     "santa_rita_best_sellers_nR6Laz",
     "santa_rita_awards_slider_dPzpD7",
     "santa_rita_best_sellers_4gPU99",
