@@ -1,6 +1,6 @@
 /*
  * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated. Prueba
+ * IMPORTANT: The contents of this file are auto-generated.
  *
  * This file may be updated by the Shopify admin language editor
  * or related systems. Please exercise caution as any changes
@@ -380,6 +380,10 @@
         "shipping_method_not_available_generic": {
           "one": "El pedido no se puede enviar a la dirección ingresada. Revisa que tu RUT sea válido (ej: 12.345.678-K) y que la dirección y comuna sean correctas para calcular el despacho."
         }
+      },
+      "shipping": {
+        "shipping_address_title": "Entregar en",
+        "title": "Métodos de entrega"
       }
     }
   },
