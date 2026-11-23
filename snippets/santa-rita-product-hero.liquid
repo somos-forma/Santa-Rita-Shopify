@@ -425,6 +425,19 @@
       <div class="santa-rita-product-hero__details">
         {{ presentation_discount_badges }}
 
+        {%- for hero_sku_variant in product.variants -%}
+          {%- assign hero_sku = hero_sku_variant.sku | strip -%}
+          {%- if hero_sku != blank -%}
+            <p
+              class="santa-rita-product-hero__sku"
+              data-sr-product-sku="{{ hero_sku_variant.id }}"
+              {% unless hero_sku_variant.id == variant.id %}hidden{% endunless %}
+            >
+              SKU: {{ hero_sku }}
+            </p>
+          {%- endif -%}
+        {%- endfor -%}
+
         <h1 class="santa-rita-product-hero__title">{{ product.title }}</h1>
 
         {% if subtitle != blank %}
@@ -629,6 +642,10 @@ resolved subtitle: {{ subtitle }}</pre>
 
           productHero?.querySelectorAll('[data-sr-product-discount]').forEach((discount) => {
             discount.hidden = discount.getAttribute('data-sr-product-discount') !== variantId;
+          });
+
+          productHero?.querySelectorAll('[data-sr-product-sku]').forEach((sku) => {
+            sku.hidden = sku.getAttribute('data-sr-product-sku') !== variantId;
           });
 
           if (addButton instanceof HTMLButtonElement) {
@@ -915,6 +932,18 @@ resolved subtitle: {{ subtitle }}</pre>
   }
 
   .santa-rita-product-hero__discount[hidden] {
+    display: none !important;
+  }
+
+  .santa-rita-product-hero__sku {
+    margin: 0 0 10px;
+    color: #5b5051;
+    font-size: 13px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+
+  .santa-rita-product-hero__sku[hidden] {
     display: none !important;
   }
 
