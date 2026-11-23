@@ -264,6 +264,7 @@
         "slide_dHgQQp",
         "slide_kRfXnQ"
       ],
+      "disabled": true,
       "settings": {
         "autoplay_desktop": false,
         "autoplay_mobile": false,
@@ -1172,16 +1173,16 @@
   "order": [
     "santa_rita_banner_slider",
     "santa_rita_best_sellers",
+    "santa_rita_awards_slider_dPzpD7",
     "santa_rita_awards_slider_VhkKe9",
     "santa_rita_best_sellers_nR6Laz",
-    "santa_rita_awards_slider_dPzpD7",
+    "santa_rita_awards_slider_MeCk4X",
     "santa_rita_best_sellers_4gPU99",
     "santa_rita_promo_slider_bDxef6",
     "santa_rita_best_sellers_YK89FB",
-    "santa_rita_awards_slider_MeCk4X",
+    "santa_rita_awards_slider_8mHN6K",
     "santa_rita_awards_slider",
     "santa_rita_best_sellers_DVUeHy",
-    "santa_rita_awards_slider_8mHN6K",
     "179450795757a06cd7",
     "santa_rita_blog_slider"
   ]
