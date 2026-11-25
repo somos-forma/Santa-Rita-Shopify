@@ -19,7 +19,7 @@
           "name": "t:names.announcement",
           "settings": {
             "text": "Despacho gratis",
-            "span": "SOlo RM",
+            "span": "SOLO RM",
             "link": "",
             "font": "var(--font-subheading--family)",
             "font_size": "0.75rem",
